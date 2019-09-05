@@ -9,7 +9,9 @@ private:
 	float vecarray[4];
 
 public:
-	// constructors
+	///
+	///constructors
+	///
 	Vector4D() {
 		vecarray[0] = 0.0f;
 		vecarray[1] = 0.0f;
@@ -45,13 +47,17 @@ public:
 	}
 
 
-	//getters
+	///
+	///getters
+	///
 	float  getx() { return vecarray[0]; }
 	float  gety() { return vecarray[1]; }
 	float  getz() { return vecarray[2]; }
 	float  getw() { return vecarray[3]; }
 
-	//setters
+	///
+	///setters
+	///
 	void set(int i, float x)
 	{
 		vecarray[i] = x;
@@ -77,7 +83,9 @@ public:
 		vecarray[2] = z;
 		vecarray[3] = w;
 	}
-	// operator overloads
+	///
+	///Overloads the + operator for vector addition
+	///
 	Vector4D operator+(const Vector4D& v) {
 		Vector4D newvec;
 		newvec.vecarray[0] = vecarray[0] + v.vecarray[0];
@@ -86,7 +94,9 @@ public:
 		newvec.vecarray[3] = vecarray[3] + v.vecarray[3];
 		return newvec;
 	}
-
+	///
+	///Overloads the - operator for vector subtraction
+	///
 	Vector4D operator-(const Vector4D& v) {
 		Vector4D newvec;
 		newvec.vecarray[0] = vecarray[0] - v.vecarray[0];
@@ -96,6 +106,9 @@ public:
 		return newvec;
 	}
 
+	///
+	///Overloads the * operator for multiplication with scalar
+	///
 	Vector4D operator*(const float& scalar) {
 		Vector4D newvec;
 		newvec.vecarray[0] = scalar * vecarray[0];
@@ -105,30 +118,35 @@ public:
 		return newvec;
 	}
 
+	///
+	///Overloads the = operator for vector copying
+	///
 	Vector4D operator=(const Vector4D& v) {
 		this->vecarray[0] = v.vecarray[0];
 		this->vecarray[1] = v.vecarray[1];
 		this->vecarray[2] = v.vecarray[2];
 		return *this;
 	}
+
+	///
+	/// Calculates length of given vector
+	///
 	float length(Vector4D v) {
 		float sum = POW2(v.vecarray[0]) + POW2(v.vecarray[1]) + POW2(v.vecarray[2]) + POW2(v.vecarray[3]);
 		float length = sqrt(sum);
-		
-
+		return length;
 	}
 
-
-	float operator*(const Vector4D& v) {
-		float scalar = (vecarray[0] * v.vecarray[0] + vecarray[1] * v.vecarray[1] + vecarray[2] * v.vecarray[2] + vecarray[3] * v.vecarray[3]);
-		return scalar;
-	}
-
-	// returns dot product
+	///
+	/// Returns the dot product of 2 vectors
+	///
 	float dot(const Vector4D& a, const Vector4D& b) {
 		return((a.vecarray[0] * b.vecarray[0]) + (a.vecarray[1] * b.vecarray[1]) + (a.vecarray[2] * b.vecarray[2]) + (a.vecarray[3] * b.vecarray[3]));
 	}
 
+	///
+	/// Returns a vector from cross multiplication
+	///
 	Vector4D cross(const Vector4D& a, const Vector4D& b) {
 		Vector4D cross;
 		cross.set(0, a.vecarray[1] * b.vecarray[2] - a.vecarray[2] * b.vecarray[1]);
@@ -137,7 +155,9 @@ public:
 		return cross;
 	}
 
-	// return vector norm
+	///
+	/// Returns the vector norm
+	///
 	Vector4D norm() {
 		Vector4D normvec;
 		float length = POW2(vecarray[0]) + POW2(vecarray[1]) + POW2(vecarray[2]) + POW2(vecarray[3]);
