@@ -6,7 +6,7 @@ class Matrix3D
 {
 
 private:
-	float mxarr[3][3];
+	float mxarr[4][4];
 
 
 public:
