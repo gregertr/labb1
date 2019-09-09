@@ -50,10 +50,10 @@ public:
 	///
 	///getters
 	///
-	float  getx() { return vecarray[0]; }
-	float  gety() { return vecarray[1]; }
-	float  getz() { return vecarray[2]; }
-	float  getw() { return vecarray[3]; }
+	float  x() { return vecarray[0]; }
+	float  y() { return vecarray[1]; }
+	float  z() { return vecarray[2]; }
+	float  w() { return vecarray[3]; }
 
 	///
 	///setters
