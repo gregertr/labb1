@@ -11,6 +11,7 @@
 #include <GLFW/glfw3.h>
 #include <nanovg.h>
 #include <string>
+#include "config.h"
 
 namespace Display
 {

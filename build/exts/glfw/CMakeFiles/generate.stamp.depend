@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.15/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.15/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.15/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/rubcap-8-local/Documents/GitGood/mesh resource/labb2/exts/glfw/CMake/modules/FindVulkan.cmake
+C:/Users/rubcap-8-local/Documents/GitGood/mesh resource/labb2/exts/glfw/CMakeLists.txt
+C:/Users/rubcap-8-local/Documents/GitGood/mesh resource/labb2/exts/glfw/src/glfw3.pc.in
+C:/Users/rubcap-8-local/Documents/GitGood/mesh resource/labb2/exts/glfw/src/glfw3Config.cmake.in
+C:/Users/rubcap-8-local/Documents/GitGood/mesh resource/labb2/exts/glfw/src/glfw_config.h.in

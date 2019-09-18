@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\exts\nanovg\src\nanovg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\exts\nanovg\src\nanovg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\exts\nanovg\src\nanovg_gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\exts\nanovg\src\nanovg_gl_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\exts\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{B1157C53-6E17-3B26-B6CC-E949FC89C44C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5A38C423-B736-3D70-928F-F21469E72FEA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

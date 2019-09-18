@@ -23,7 +23,7 @@ class Matrix4D
 {
 
 public:
-	float mxarr[4][4];
+	Vector4D mxarr[4];
 
 	// constructors
 	Matrix4D()
@@ -108,13 +108,29 @@ public:
 	///getters 
 	///
 	float get(int i, int j) {
+		if (i >= 4 || j >= 4) {
+			throw std::out_of_range("Index out of range");
+		}
 		return mxarr[i][j];
+	}
+
+	float x() {
+		return mxarr[0][3];
+	}
+	float y() {
+		return mxarr[1][3];
+	}
+	float z() {
+		return mxarr[2][3];
 	}
 
 	///
 	///setters
 	///
 	void set(int i, int j, float val) {
+		if (i >= 4 || j >= 4) {
+			throw std::out_of_range("Index out of range");
+		}
 		mxarr[i][j] = val;
 	}
 
@@ -166,12 +182,15 @@ public:
 	Matrix4D operator*(Matrix4D& m)
 	{
 		Matrix4D newmx;
-		for (int i = 0; i < 4; ++i)
-			for (int j = 0; j < 4; ++j)
-				for (int k = 0; k < 4; ++k)
-				{
+		for (int i = 0; i < 4; ++i) {
+			for (int j = 0; j < 4; ++j) {
+				newmx.mxarr[i][j] = 0;
+				for (int k = 0; k < 4; ++k) {
 					newmx.mxarr[i][j] += this->mxarr[i][k] * m.mxarr[k][j];
 				}
+			}
+		}
+
 		return newmx;
 	}
 
@@ -180,16 +199,25 @@ public:
 	///
 	Vector4D operator*(Vector4D& vector)
 	{
-		float x = mxarr[0][0] * vector.x() + mxarr[0][1] * vector.y();
-		float y = mxarr[1][0] * vector.x() + mxarr[1][1] * vector.y();
-		Vector4D newVector(x, y);
+		float x = mxarr[0][0] * vector.x() + mxarr[0][1] * vector.y() + mxarr[0][2] * vector.z() + mxarr[0][3] * vector.w();
+		float y = mxarr[1][0] * vector.x() + mxarr[1][1] * vector.y() + mxarr[1][2] * vector.z() + mxarr[1][3] * vector.w();
+		float z = mxarr[2][0] * vector.x() + mxarr[2][1] * vector.y() + mxarr[2][2] * vector.z() + mxarr[2][3] * vector.w();
+		float w = mxarr[3][0] * vector.x() + mxarr[3][1] * vector.y() + mxarr[3][2] * vector.z() + mxarr[3][3] * vector.w();
+		Vector4D newVector(x, y, z, w);
 		return newVector;
 	}
 	///
 	///Array overload
 	///
-	float operator [] (int i) const {
-		return this->mxarr[i][i];
+	Vector4D operator [] (int i) const {
+		//return *(Vector4D*)(&mxarr[i]);
+		//return Vector4D(mxarr[i][0], mxarr[i][1], mxarr[i][2], mxarr[i][3]);
+		return mxarr[i];
+	}
+	Vector4D& operator [] (int i) {
+		//return *(Vector4D*)(&mxarr[i]);
+		//return vecarray[i];
+		return mxarr[i];
 	}
 
 	///
@@ -368,11 +396,22 @@ public:
 	}
 
 	///
+	/// Translate
+	///
+	Matrix4D translation(Vector4D v) {
+		Matrix4D transmx(1.0f, 0.0f, 0.0f, v.x(),
+				         0.0f, 1.0f, 0.0f, v.y(),
+			             0.0f, 0.0f, 1.0f, v.z(),
+			             0.0f, 0.0f, 0.0f, 1.0f);
+		return transmx;
+	}
+
+	///
 	///Rotation around x-axis
 	///
 	Matrix4D rotx(float d) {
 		float cs = cos(d);
-		float sn = sn;
+		float sn = sin(d);
 		Matrix4D rot(1, 0, 0, 0, 
 			         0, cs, -sn, 0,
 			         0, sn, cs, 0,
@@ -399,7 +438,8 @@ public:
 	Matrix4D rotz(float d) {
 		float cs = cos(d);
 		float sn = sin(d);
-		Matrix4D rot(cs, -sn, 0, 0,
+		Matrix4D rot(
+			cs, -sn, 0, 0,
 			sn, cs, 0, 0,
 			0, 0, 1, 0,
 			0, 0, 0, 1);

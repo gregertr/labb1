@@ -128,6 +128,15 @@ public:
 		return *this;
 	}
 
+	float operator [] (int i) const {
+		//return *(Vector4D*)(&mxarr[i]);
+		return vecarray[i];
+	}
+
+	float& operator [] (int i) {
+		return vecarray[i];
+	}
+
 	///
 	/// Calculates length of given vector
 	///

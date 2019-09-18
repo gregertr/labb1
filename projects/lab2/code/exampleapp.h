@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 #include "core/app.h"
 #include "render/window.h"
+#include "mesh.h"
 namespace Example
 {
 class ExampleApp : public Core::App
@@ -29,5 +30,6 @@ private:
 	GLuint pixelShader;
 	GLuint triangle;
 	Display::Window* window;
+	MeshResource mesh;
 };
 } // namespace Example

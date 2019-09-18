@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\build\CMakeFiles\0f6c152d982acc4797892495d38eeb16\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CF1D6FF4-2A87-348A-8ECA-F1E1854955DD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

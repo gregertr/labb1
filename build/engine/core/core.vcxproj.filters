@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\core\app.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\config.cc">
+      <Filter>pch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\core\app.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\config.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{34E8F1F1-2830-359B-86E7-C20A64023604}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{C9A1CC19-A737-3E93-88FC-03C1CB949367}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

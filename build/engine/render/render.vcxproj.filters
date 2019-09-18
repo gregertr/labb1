@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\render\window.cc">
+      <Filter>display</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\config.cc">
+      <Filter>pch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\render\window.h">
+      <Filter>display</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\config.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\rubcap-8-local\Documents\GitGood\mesh resource\labb2\engine\render\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="display">
+      <UniqueIdentifier>{074D5B58-3D39-3ACC-A82D-F5645C37AC98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{C9A1CC19-A737-3E93-88FC-03C1CB949367}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
